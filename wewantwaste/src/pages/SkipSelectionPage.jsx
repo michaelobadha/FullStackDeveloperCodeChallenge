@@ -7,7 +7,7 @@ const SkipSelectionPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/skips.json')
+    fetch('https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to load skips');
         return res.json();
